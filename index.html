@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrekMate | Trek Planning Dashboard</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🏔️ TrekMate
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#allTreks">Treks</a></li>
+                <li><a href="#">Budget</a></li>
+                <li><a href="#">Checklist</a></li>
+            </ul>
+
+            <button id="darkModeBtn">
+                🌙
+            </button>
+
+        </nav>
+
+        <!-- Hero Section -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h1>Plan Your Next Adventure</h1>
+
+                <p>
+                    Discover treks, manage expenses,
+                    track packing progress and organize
+                    every journey from one dashboard.
+                </p>
+
+                <button class="explore-btn">
+                    Explore Treks
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Dashboard Section -->
+
+        <section class="dashboard">
+
+            <div class="card">
+                <i class="fa-solid fa-mountain"></i>
+                <h2>Total Treks</h2>
+                <p id="totalTreks">5</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-calendar"></i>
+                <h2>Upcoming Trek</h2>
+                <p>Rajgad</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-wallet"></i>
+                <h2>Budget</h2>
+                <p>₹0</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-backpack"></i>
+                <h2>Packing</h2>
+                <p>0%</p>
+            </div>
+
+        </section>
+
+        <!-- Featured Treks -->
+
+        <section class="featured-treks">
+
+            <h2>Featured Treks</h2>
+
+            <div class="featured-container">
+
+                <div class="featured-card">
+                    <img src="images/rajgad.jpg" alt="Rajgad">
+                    <h3>Rajgad Fort</h3>
+                    <p>Capital fort of Chhatrapati Shivaji Maharaj.</p>
+                </div>
+
+                <div class="featured-card">
+                    <img src="images/kalsubai.jpg" alt="Kalsubai">
+                    <h3>Kalsubai Peak</h3>
+                    <p>Highest peak in Maharashtra.</p>
+                </div>
+
+                <div class="featured-card">
+                    <img src="images/harishchandragad.jpg"
+                        alt="Harishchandragad">
+                    <h3>Harishchandragad</h3>
+                    <p>Famous for Konkan Kada and scenic views.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search Section -->
+
+        <section class="search-section" id="allTreks">
+
+            <h2>All Treks</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Trek...">
+
+        </section>
+
+        <!-- Trek Cards Section -->
+
+        <section id="trekContainer" class="trek-container">
+
+        </section>
+
+        <!-- Trek Details Modal -->
+
+        <div id="trekModal" class="modal">
+
+            <div class="modal-content">
+
+                <span id="closeModal">&times;</span>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalInfo"></p>
+
+                <p id="modalSeason"></p>
+
+                <p id="modalDuration"></p>
+
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
